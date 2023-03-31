@@ -1,0 +1,28 @@
+{
+  "name": "types",
+  "version": "1.0.0",
+  "description": "\"# checkout-types\"",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files" : ["/dist", "/package.json", "/package-lock.json"],
+  "directories": {
+    "lib": "dist/lib"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/check-out-process/checkout-types.git"
+  },
+  "author": "Checkout Colman Team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/check-out-process/checkout-types/issues"
+  },
+  "homepage": "https://github.com/check-out-process/checkout-types#readme",
+  "devDependencies": {
+    "typescript": "^5.0.3"
+  }
+}
