@@ -4,7 +4,11 @@
   "description": "\"# checkout-types\"",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files" : ["/dist", "/package.json", "/package-lock.json"],
+  "files": [
+    "/dist",
+    "/package.json",
+    "/package-lock.json"
+  ],
   "directories": {
     "lib": "dist/lib"
   },
@@ -24,5 +28,8 @@
   "homepage": "https://github.com/check-out-process/checkout-types#readme",
   "devDependencies": {
     "typescript": "^5.0.3"
+  },
+  "dependencies": {
+    "typeorm": "^0.3.12"
   }
 }
