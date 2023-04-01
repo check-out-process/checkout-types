@@ -19,3 +19,4 @@ __exportStar(require("./lib/dto/departments.dto"), exports);
 __exportStar(require("./lib/dto/processes.dto"), exports);
 __exportStar(require("./lib/dto/rooms.dto"), exports);
 __exportStar(require("./lib/dto/sectors.dto"), exports);
+__exportStar(require("./lib/enums/status"), exports);
