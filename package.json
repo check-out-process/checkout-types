@@ -1,6 +1,6 @@
 {
-  "name": "types",
-  "version": "1.0.0",
+  "name": "@checkout/types",
+  "version": "1.1.0",
   "description": "\"# checkout-types\"",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -31,7 +31,6 @@
     "typescript": "^5.0.3"
   },
   "dependencies": {
-    "class-validator": "^0.14.0",
-    "typeorm": "^0.3.12"
+    "class-validator": "^0.14.0"
   }
 }
