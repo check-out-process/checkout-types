@@ -1,13 +1,4 @@
-import { Column, PrimaryColumn } from "typeorm";
-
-export class Department {
-    @PrimaryColumn({unique: true})
+export type DepartmentType = {
     ID: string;
-
-    @Column()
     Name: string;
-
-    constructor(id?: string, name?: string ){
-         this.ID = id; this.Name = name;
-    }
 }

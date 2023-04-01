@@ -1,5 +1,5 @@
-export type Department = {
-    id: number;
-    uuid: string;
-    name: string;
-};
+export declare class Department {
+    ID: string;
+    Name: string;
+    constructor(id?: string, name?: string);
+}

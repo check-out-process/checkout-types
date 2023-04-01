@@ -12,3 +12,11 @@ export class BedPatchParams {
     @IsOptional()
     textQR?: string;
 }
+
+export type BedDTO = {
+    id: number;
+    uuid: string;
+    name: string
+    departmentUuid: string;
+    roomUuid: string
+}

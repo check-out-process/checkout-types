@@ -1,6 +1,6 @@
-export type Room = {
-    id: number;
-    uuid: string;
-    name: string;
-    departmentUuid: string;
-};
+export declare class Room {
+    ID: string;
+    departmentId: string;
+    roomName: string;
+    constructor(id?: string, departmentID?: string, name?: string);
+}

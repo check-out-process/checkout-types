@@ -6,25 +6,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Room = void 0;
-const typeorm_1 = require("typeorm");
-let Room = class Room {
-    constructor(id, departmentID, name) {
-        this.ID = id;
-        this.departmentId = departmentID;
-        this.roomName = name;
-    }
-};
+exports.BedPatchParams = exports.BedCreationParams = void 0;
+const class_validator_1 = require("class-validator");
+class BedCreationParams {
+}
 __decorate([
-    (0, typeorm_1.PrimaryColumn)({ unique: true })
-], Room.prototype, "ID", void 0);
+    (0, class_validator_1.IsString)()
+], BedCreationParams.prototype, "textQR", void 0);
+exports.BedCreationParams = BedCreationParams;
+class BedPatchParams {
+}
 __decorate([
-    (0, typeorm_1.Column)()
-], Room.prototype, "departmentId", void 0);
-__decorate([
-    (0, typeorm_1.Column)()
-], Room.prototype, "roomName", void 0);
-Room = __decorate([
-    (0, typeorm_1.Entity)()
-], Room);
-exports.Room = Room;
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)()
+], BedPatchParams.prototype, "textQR", void 0);
+exports.BedPatchParams = BedPatchParams;

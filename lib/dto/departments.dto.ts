@@ -10,3 +10,7 @@ export class DepartmentCreationParams {
     @IsString()
     Name: string
 }
+
+export type DepartmentDTO = {
+
+}
