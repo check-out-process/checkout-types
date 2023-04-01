@@ -1,10 +1,5 @@
-export class Room{
-
+export type RoomType = {
     ID: string;
-
     departmentId: string;
-
     roomName: string;
-
-
 }

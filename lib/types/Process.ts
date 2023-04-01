@@ -1,4 +1,4 @@
-export type ProcssPropertiesSchema = {
+export type ProcssPropertiesSchemaType = {
     id: number;
     uuid: string;
     propertyDisplayName: string;
