@@ -14,5 +14,8 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-__exportStar(require("./lib/dto"), exports);
-__exportStar(require("./lib/enums"), exports);
+__exportStar(require("./beds.dto"), exports);
+__exportStar(require("./departments.dto"), exports);
+__exportStar(require("./processes.dto"), exports);
+__exportStar(require("./rooms.dto"), exports);
+__exportStar(require("./sectors.dto"), exports);

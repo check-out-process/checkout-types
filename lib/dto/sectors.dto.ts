@@ -1,4 +1,4 @@
-import { IsString, IsNumber, IsOptional } from "class-validator";
+import { IsString, IsNumber, IsOptional, IsArray } from "class-validator";
 
 export class SectorCreationParams {
     @IsString()
@@ -6,6 +6,9 @@ export class SectorCreationParams {
 
     @IsNumber()
     defaultResponsibleUserId: number;
+
+    @IsArray()
+    responsibleUsersIds: number[];
 }
 
 export class SectorPatchParams {
@@ -16,4 +19,8 @@ export class SectorPatchParams {
     @IsNumber()
     @IsOptional()
     defaultResponsibleUserId?: number;
+
+    @IsArray()
+    @IsOptional()
+    responsibleUsersIds: number[];
 }

@@ -16,6 +16,9 @@ __decorate([
 __decorate([
     (0, class_validator_1.IsNumber)()
 ], SectorCreationParams.prototype, "defaultResponsibleUserId", void 0);
+__decorate([
+    (0, class_validator_1.IsArray)()
+], SectorCreationParams.prototype, "responsibleUsersIds", void 0);
 exports.SectorCreationParams = SectorCreationParams;
 class SectorPatchParams {
 }
@@ -27,4 +30,8 @@ __decorate([
     (0, class_validator_1.IsNumber)(),
     (0, class_validator_1.IsOptional)()
 ], SectorPatchParams.prototype, "defaultResponsibleUserId", void 0);
+__decorate([
+    (0, class_validator_1.IsArray)(),
+    (0, class_validator_1.IsOptional)()
+], SectorPatchParams.prototype, "responsibleUsersIds", void 0);
 exports.SectorPatchParams = SectorPatchParams;
