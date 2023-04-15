@@ -1,20 +1,20 @@
-export type ProcessDTO = {};
-export declare class newSectorInstanceData {
+export type ProcessInstanceType = {};
+export declare class NewSectorInstanceData {
     sectorId: string;
     workerId: number;
     responsibleUserId: number;
 }
-export declare class createProcessInstanceFromDataParams {
+export declare class CreateProcessInstanceFromDataParams {
     name: string;
     description: string;
     processType: number;
-    orderedSectors: newSectorInstanceData[];
+    orderedSectors: NewSectorInstanceData[];
     creatorId: number;
     departmentId: string;
     roomId: string;
     bedId: string;
 }
-export declare class createProcessInstanceFromTemplateParams {
+export declare class CreateProcessInstanceFromTemplateParams {
     templateId: string;
     creatorId: number;
     bedId: string;

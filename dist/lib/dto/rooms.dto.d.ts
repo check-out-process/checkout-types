@@ -1,6 +1,6 @@
 export declare class RoomCreationParams {
-    roomName: string;
+    name: string;
 }
 export declare class RoomPatchParams {
-    roomName?: string;
+    name?: string;
 }

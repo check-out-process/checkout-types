@@ -6,32 +6,88 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SectorPatchParams = exports.SectorCreationParams = void 0;
+exports.SectorPatchAddResponsiblesParams = exports.SectorPatchAddUsersParams = exports.SectorPatchParams = exports.SectorQueryParams = exports.SectorCreationParams = void 0;
 const class_validator_1 = require("class-validator");
 class SectorCreationParams {
 }
 __decorate([
     (0, class_validator_1.IsString)()
-], SectorCreationParams.prototype, "sectorName", void 0);
+], SectorCreationParams.prototype, "name", void 0);
 __decorate([
     (0, class_validator_1.IsNumber)()
 ], SectorCreationParams.prototype, "defaultResponsibleUserId", void 0);
 __decorate([
-    (0, class_validator_1.IsArray)()
+    (0, class_validator_1.IsArray)(),
+    (0, class_validator_1.IsNumber)({}, { each: true }),
+    (0, class_validator_1.IsOptional)()
 ], SectorCreationParams.prototype, "responsibleUsersIds", void 0);
+__decorate([
+    (0, class_validator_1.IsArray)(),
+    (0, class_validator_1.IsNumber)({}, { each: true }),
+    (0, class_validator_1.IsOptional)()
+], SectorCreationParams.prototype, "committingUsersIds", void 0);
+__decorate([
+    (0, class_validator_1.IsArray)(),
+    (0, class_validator_1.IsNumber)({}, { each: true }),
+    (0, class_validator_1.IsOptional)()
+], SectorCreationParams.prototype, "processTypes", void 0);
+__decorate([
+    (0, class_validator_1.IsArray)(),
+    (0, class_validator_1.IsString)({ each: true }),
+    (0, class_validator_1.IsOptional)()
+], SectorCreationParams.prototype, "relatedProcessIds", void 0);
 exports.SectorCreationParams = SectorCreationParams;
+class SectorQueryParams {
+}
+__decorate([
+    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.IsOptional)()
+], SectorQueryParams.prototype, "processtype", void 0);
+exports.SectorQueryParams = SectorQueryParams;
 class SectorPatchParams {
 }
 __decorate([
     (0, class_validator_1.IsString)(),
     (0, class_validator_1.IsOptional)()
-], SectorPatchParams.prototype, "sectorName", void 0);
+], SectorPatchParams.prototype, "name", void 0);
 __decorate([
     (0, class_validator_1.IsNumber)(),
     (0, class_validator_1.IsOptional)()
 ], SectorPatchParams.prototype, "defaultResponsibleUserId", void 0);
 __decorate([
     (0, class_validator_1.IsArray)(),
+    (0, class_validator_1.IsNumber)({}, { each: true }),
     (0, class_validator_1.IsOptional)()
 ], SectorPatchParams.prototype, "responsibleUsersIds", void 0);
+__decorate([
+    (0, class_validator_1.IsArray)(),
+    (0, class_validator_1.IsNumber)({}, { each: true }),
+    (0, class_validator_1.IsOptional)()
+], SectorPatchParams.prototype, "committingUsersIds", void 0);
+__decorate([
+    (0, class_validator_1.IsArray)(),
+    (0, class_validator_1.IsNumber)({}, { each: true }),
+    (0, class_validator_1.IsOptional)()
+], SectorPatchParams.prototype, "processTypes", void 0);
+__decorate([
+    (0, class_validator_1.IsArray)(),
+    (0, class_validator_1.IsString)({ each: true }),
+    (0, class_validator_1.IsOptional)()
+], SectorPatchParams.prototype, "relatedProcessIds", void 0);
 exports.SectorPatchParams = SectorPatchParams;
+class SectorPatchAddUsersParams {
+}
+__decorate([
+    (0, class_validator_1.IsArray)(),
+    (0, class_validator_1.IsNumber)({}, { each: true }),
+    (0, class_validator_1.IsOptional)()
+], SectorPatchAddUsersParams.prototype, "userIds", void 0);
+exports.SectorPatchAddUsersParams = SectorPatchAddUsersParams;
+class SectorPatchAddResponsiblesParams {
+}
+__decorate([
+    (0, class_validator_1.IsArray)(),
+    (0, class_validator_1.IsNumber)({}, { each: true }),
+    (0, class_validator_1.IsOptional)()
+], SectorPatchAddResponsiblesParams.prototype, "userIds", void 0);
+exports.SectorPatchAddResponsiblesParams = SectorPatchAddResponsiblesParams;

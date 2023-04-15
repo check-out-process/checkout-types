@@ -1,7 +1,7 @@
 export declare class DepartmentPatchParams {
-    Name?: string;
+    name?: string;
 }
 export declare class DepartmentCreationParams {
-    Name: string;
+    name: string;
 }
 export type DepartmentDTO = {};

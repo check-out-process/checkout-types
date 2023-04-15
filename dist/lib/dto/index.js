@@ -16,6 +16,8 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./beds.dto"), exports);
 __exportStar(require("./departments.dto"), exports);
-__exportStar(require("./processes.dto"), exports);
+__exportStar(require("./process-instances.dto"), exports);
+__exportStar(require("./process-templates.dto"), exports);
 __exportStar(require("./rooms.dto"), exports);
 __exportStar(require("./sectors.dto"), exports);
+__exportStar(require("./users.dto"), exports);

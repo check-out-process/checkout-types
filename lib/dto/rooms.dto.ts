@@ -1,15 +1,15 @@
-import { IsString, IsNumber, IsOptional } from 'class-validator';
+import { IsString, IsOptional } from 'class-validator';
 
 
 export class RoomCreationParams {
 
     @IsString()
-    roomName: string
+    name: string
 }
 
 export class RoomPatchParams {
 
     @IsString()
     @IsOptional()
-    roomName?: string;
+    name?: string;
 }

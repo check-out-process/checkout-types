@@ -13,11 +13,11 @@ class DepartmentPatchParams {
 __decorate([
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsString)()
-], DepartmentPatchParams.prototype, "Name", void 0);
+], DepartmentPatchParams.prototype, "name", void 0);
 exports.DepartmentPatchParams = DepartmentPatchParams;
 class DepartmentCreationParams {
 }
 __decorate([
     (0, class_validator_1.IsString)()
-], DepartmentCreationParams.prototype, "Name", void 0);
+], DepartmentCreationParams.prototype, "name", void 0);
 exports.DepartmentCreationParams = DepartmentCreationParams;

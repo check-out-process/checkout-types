@@ -3,12 +3,12 @@ import { IsOptional, IsString } from "class-validator"
 export class DepartmentPatchParams {
     @IsOptional()
     @IsString()
-    Name?: string
+    name?: string
 }
 
 export class DepartmentCreationParams {
     @IsString()
-    Name: string
+    name: string
 }
 
 export type DepartmentDTO = {

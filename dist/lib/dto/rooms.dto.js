@@ -12,12 +12,12 @@ class RoomCreationParams {
 }
 __decorate([
     (0, class_validator_1.IsString)()
-], RoomCreationParams.prototype, "roomName", void 0);
+], RoomCreationParams.prototype, "name", void 0);
 exports.RoomCreationParams = RoomCreationParams;
 class RoomPatchParams {
 }
 __decorate([
     (0, class_validator_1.IsString)(),
     (0, class_validator_1.IsOptional)()
-], RoomPatchParams.prototype, "roomName", void 0);
+], RoomPatchParams.prototype, "name", void 0);
 exports.RoomPatchParams = RoomPatchParams;

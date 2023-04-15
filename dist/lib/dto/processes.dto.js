@@ -13,13 +13,13 @@ class newSectorInstanceData {
 }
 __decorate([
     (0, class_validator_1.IsString)()
-], newSectorInstanceData.prototype, "sector_id", void 0);
+], newSectorInstanceData.prototype, "sectorId", void 0);
 __decorate([
     (0, class_validator_1.IsNumber)()
-], newSectorInstanceData.prototype, "worker_id", void 0);
+], newSectorInstanceData.prototype, "workerId", void 0);
 __decorate([
     (0, class_validator_1.IsNumber)()
-], newSectorInstanceData.prototype, "responsible_user_id", void 0);
+], newSectorInstanceData.prototype, "responsibleUserId", void 0);
 exports.newSectorInstanceData = newSectorInstanceData;
 class createProcessInstanceFromDataParams {
 }
@@ -36,10 +36,10 @@ __decorate([
     (0, class_validator_1.IsArray)(),
     (0, class_validator_1.ValidateNested)({ each: true }),
     (0, class_transformer_1.Type)(() => newSectorInstanceData)
-], createProcessInstanceFromDataParams.prototype, "ordered_sectors", void 0);
+], createProcessInstanceFromDataParams.prototype, "orderedSectors", void 0);
 __decorate([
     (0, class_validator_1.IsNumber)()
-], createProcessInstanceFromDataParams.prototype, "creator_id", void 0);
+], createProcessInstanceFromDataParams.prototype, "creatorId", void 0);
 __decorate([
     (0, class_validator_1.IsString)()
 ], createProcessInstanceFromDataParams.prototype, "departmentId", void 0);
@@ -54,11 +54,17 @@ class createProcessInstanceFromTemplateParams {
 }
 __decorate([
     (0, class_validator_1.IsString)()
-], createProcessInstanceFromTemplateParams.prototype, "template_id", void 0);
+], createProcessInstanceFromTemplateParams.prototype, "templateId", void 0);
 __decorate([
     (0, class_validator_1.IsNumber)()
-], createProcessInstanceFromTemplateParams.prototype, "creator_id", void 0);
+], createProcessInstanceFromTemplateParams.prototype, "creatorId", void 0);
 __decorate([
     (0, class_validator_1.IsString)()
 ], createProcessInstanceFromTemplateParams.prototype, "bedId", void 0);
+__decorate([
+    (0, class_validator_1.IsString)()
+], createProcessInstanceFromTemplateParams.prototype, "departmentId", void 0);
+__decorate([
+    (0, class_validator_1.IsString)()
+], createProcessInstanceFromTemplateParams.prototype, "roomId", void 0);
 exports.createProcessInstanceFromTemplateParams = createProcessInstanceFromTemplateParams;
