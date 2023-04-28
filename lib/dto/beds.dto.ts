@@ -7,6 +7,12 @@ export class BedCreationParams {
 
     @IsString()
     name: string;
+
+    @IsString()
+    departmentId: string;
+
+    @IsString()
+    roomId: string;
 }
 
 export class BedPatchParams {
@@ -18,6 +24,14 @@ export class BedPatchParams {
     @IsOptional()
     @IsString()
     name?: string;
+
+    @IsString()
+    @IsOptional()
+    departmentId?: string;
+
+    @IsString()
+    @IsOptional()
+    roomId?: string;
 }
 
 //Change properties, keep convention

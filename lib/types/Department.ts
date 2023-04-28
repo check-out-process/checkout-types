@@ -1,4 +1,4 @@
 export type DepartmentType = {
-    ID: string;
-    Name: string;
+    id: string;
+    name: string;
 }

@@ -1,6 +1,5 @@
 
 import { IsEnum, IsNumber, IsOptional, IsString } from "class-validator";
-import { Role } from "../enums";
 
 export class UserCreationParams {
     @IsNumber()
@@ -12,22 +11,29 @@ export class UserCreationParams {
     @IsString()
     username : string;
 
-    @IsNumber()
-    job: number;
+    @IsString()
+    jobId: string;
 
-    @IsEnum(Role)
-    role: Role;
+    @IsString()
+    roleId: string;
+
+    @IsNumber()
+    phoneNumber: number;
 }
 
 export class UserPatchParams {
 
+    @IsString()
+    @IsOptional()
+    jobId?: string;
+
+    @IsString()
+    @IsOptional()
+    roleId?: string;
+
     @IsNumber()
     @IsOptional()
-    job?: number;
-
-    @IsEnum(Role)
-    @IsOptional()
-    role?: Role;
+    phoneNumber?: number;
 }
 
 export class UserPatchAddSectorParams {

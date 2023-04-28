@@ -1,5 +1,7 @@
-import { IsArray, IsNumber, IsString, ValidateNested } from "class-validator"
+import { IsArray, IsEnum, IsNumber, IsObject, IsString, ValidateNested } from "class-validator"
 import { Type } from 'class-transformer'
+import { Status } from "../enums";
+import { DepartmentType } from "../types/Department";
 
 
 
@@ -45,6 +47,8 @@ export class CreateProcessInstanceFromDataParams {
     @IsString()
     bedId: string;
 
+
+
 }
 
 export class CreateProcessInstanceFromTemplateParams {
@@ -62,5 +66,26 @@ export class CreateProcessInstanceFromTemplateParams {
 
     @IsString()
     roomId: string;
+
+}
+
+export class UpdateSectorStatusParams {
+
+    @IsString()
+    sectorId: string;
+
+    @IsEnum(Status)
+    status: Status;
+
+    // should be delivered by jwt
+    @IsNumber()
+    userId: number;
+}
+
+export class ProcessInstanceStatusReturnedParams {
+    name: string;
+    description: string;
+    creator: string;
+    department: DepartmentType;
 
 }
