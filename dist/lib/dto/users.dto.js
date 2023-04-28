@@ -8,7 +8,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.UserPatchAddSectorParams = exports.UserPatchParams = exports.UserCreationParams = void 0;
 const class_validator_1 = require("class-validator");
-const enums_1 = require("../enums");
 class UserCreationParams {
 }
 __decorate([
@@ -21,22 +20,29 @@ __decorate([
     (0, class_validator_1.IsString)()
 ], UserCreationParams.prototype, "username", void 0);
 __decorate([
-    (0, class_validator_1.IsNumber)()
-], UserCreationParams.prototype, "job", void 0);
+    (0, class_validator_1.IsString)()
+], UserCreationParams.prototype, "jobId", void 0);
 __decorate([
-    (0, class_validator_1.IsEnum)(enums_1.Role)
-], UserCreationParams.prototype, "role", void 0);
+    (0, class_validator_1.IsString)()
+], UserCreationParams.prototype, "roleId", void 0);
+__decorate([
+    (0, class_validator_1.IsNumber)()
+], UserCreationParams.prototype, "phoneNumber", void 0);
 exports.UserCreationParams = UserCreationParams;
 class UserPatchParams {
 }
 __decorate([
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)()
+], UserPatchParams.prototype, "jobId", void 0);
+__decorate([
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)()
+], UserPatchParams.prototype, "roleId", void 0);
+__decorate([
     (0, class_validator_1.IsNumber)(),
     (0, class_validator_1.IsOptional)()
-], UserPatchParams.prototype, "job", void 0);
-__decorate([
-    (0, class_validator_1.IsEnum)(enums_1.Role),
-    (0, class_validator_1.IsOptional)()
-], UserPatchParams.prototype, "role", void 0);
+], UserPatchParams.prototype, "phoneNumber", void 0);
 exports.UserPatchParams = UserPatchParams;
 class UserPatchAddSectorParams {
 }

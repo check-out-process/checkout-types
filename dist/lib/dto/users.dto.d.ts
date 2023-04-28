@@ -1,14 +1,15 @@
-import { Role } from "../enums";
 export declare class UserCreationParams {
     id: number;
     fullname: string;
     username: string;
-    job: number;
-    role: Role;
+    jobId: string;
+    roleId: string;
+    phoneNumber: number;
 }
 export declare class UserPatchParams {
-    job?: number;
-    role?: Role;
+    jobId?: string;
+    roleId?: string;
+    phoneNumber?: number;
 }
 export declare class UserPatchAddSectorParams {
     sectorId: string;

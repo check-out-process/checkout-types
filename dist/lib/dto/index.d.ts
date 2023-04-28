@@ -5,3 +5,5 @@ export * from './process-templates.dto';
 export * from './rooms.dto';
 export * from './sectors.dto';
 export * from './users.dto';
+export * from './jobs.dto';
+export * from './roles.dto';

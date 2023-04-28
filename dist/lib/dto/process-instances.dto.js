@@ -6,9 +6,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CreateProcessInstanceFromTemplateParams = exports.CreateProcessInstanceFromDataParams = exports.NewSectorInstanceData = void 0;
+exports.ProcessInstanceStatusReturnedParams = exports.UpdateSectorStatusParams = exports.CreateProcessInstanceFromTemplateParams = exports.CreateProcessInstanceFromDataParams = exports.NewSectorInstanceData = void 0;
 const class_validator_1 = require("class-validator");
 const class_transformer_1 = require("class-transformer");
+const enums_1 = require("../enums");
 class NewSectorInstanceData {
 }
 __decorate([
@@ -68,3 +69,18 @@ __decorate([
     (0, class_validator_1.IsString)()
 ], CreateProcessInstanceFromTemplateParams.prototype, "roomId", void 0);
 exports.CreateProcessInstanceFromTemplateParams = CreateProcessInstanceFromTemplateParams;
+class UpdateSectorStatusParams {
+}
+__decorate([
+    (0, class_validator_1.IsString)()
+], UpdateSectorStatusParams.prototype, "sectorId", void 0);
+__decorate([
+    (0, class_validator_1.IsEnum)(enums_1.Status)
+], UpdateSectorStatusParams.prototype, "status", void 0);
+__decorate([
+    (0, class_validator_1.IsNumber)()
+], UpdateSectorStatusParams.prototype, "userId", void 0);
+exports.UpdateSectorStatusParams = UpdateSectorStatusParams;
+class ProcessInstanceStatusReturnedParams {
+}
+exports.ProcessInstanceStatusReturnedParams = ProcessInstanceStatusReturnedParams;

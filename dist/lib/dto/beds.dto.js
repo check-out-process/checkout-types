@@ -16,6 +16,12 @@ __decorate([
 __decorate([
     (0, class_validator_1.IsString)()
 ], BedCreationParams.prototype, "name", void 0);
+__decorate([
+    (0, class_validator_1.IsString)()
+], BedCreationParams.prototype, "departmentId", void 0);
+__decorate([
+    (0, class_validator_1.IsString)()
+], BedCreationParams.prototype, "roomId", void 0);
 exports.BedCreationParams = BedCreationParams;
 class BedPatchParams {
 }
@@ -27,4 +33,12 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsString)()
 ], BedPatchParams.prototype, "name", void 0);
+__decorate([
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)()
+], BedPatchParams.prototype, "departmentId", void 0);
+__decorate([
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)()
+], BedPatchParams.prototype, "roomId", void 0);
 exports.BedPatchParams = BedPatchParams;
