@@ -17,8 +17,9 @@ export class UserCreationParams {
     @IsString()
     roleId: string;
 
+    //consider changing to string with number check
     @IsNumber()
-    phoneNumber: number;
+    phoneNumber: string;
 }
 
 export class UserPatchParams {

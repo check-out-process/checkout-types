@@ -4,7 +4,7 @@ export declare class UserCreationParams {
     username: string;
     jobId: string;
     roleId: string;
-    phoneNumber: number;
+    phoneNumber: string;
 }
 export declare class UserPatchParams {
     jobId?: string;
