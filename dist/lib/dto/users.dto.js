@@ -26,7 +26,7 @@ __decorate([
     (0, class_validator_1.IsString)()
 ], UserCreationParams.prototype, "roleId", void 0);
 __decorate([
-    (0, class_validator_1.IsNumber)()
+    (0, class_validator_1.IsString)()
 ], UserCreationParams.prototype, "phoneNumber", void 0);
 exports.UserCreationParams = UserCreationParams;
 class UserPatchParams {
