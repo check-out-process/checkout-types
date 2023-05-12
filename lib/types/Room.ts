@@ -1,5 +1,5 @@
 export type RoomType = {
-    ID: string;
+    id: string;
     departmentId: string;
-    roomName: string;
+    name: string;
 }

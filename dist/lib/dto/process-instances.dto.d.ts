@@ -1,5 +1,6 @@
 import { Status } from "../enums";
 import { DepartmentType } from "../types/Department";
+import { RoomType } from "../types/Room";
 export type ProcessInstanceType = {};
 export declare class NewSectorInstanceData {
     sectorId: string;
@@ -23,14 +24,24 @@ export declare class CreateProcessInstanceFromTemplateParams {
     departmentId: string;
     roomId: string;
 }
+export declare class GetProcessInstanceStatusParams {
+    userId: number;
+}
 export declare class UpdateSectorStatusParams {
-    sectorId: string;
+    processInstanceId: string;
+    sectorInstanceId: string;
     status: Status;
     userId: number;
 }
 export declare class ProcessInstanceStatusReturnedParams {
+    processInstanceId: string;
     name: string;
     description: string;
     creator: string;
     department: DepartmentType;
+    room: RoomType;
+    processStatus: Status;
+    processType: string;
+    sectorInstances: Object[];
+    currentSectorInstance: Object;
 }

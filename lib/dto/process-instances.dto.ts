@@ -1,7 +1,8 @@
-import { IsArray, IsEnum, IsNumber, IsObject, IsString, ValidateNested } from "class-validator"
+import { IsArray, IsEnum, IsNumber, IsObject, IsString, ValidateNested, isNumber } from "class-validator"
 import { Type } from 'class-transformer'
 import { Status } from "../enums";
 import { DepartmentType } from "../types/Department";
+import { RoomType } from "../types/Room";
 
 
 
@@ -69,10 +70,18 @@ export class CreateProcessInstanceFromTemplateParams {
 
 }
 
+export class GetProcessInstanceStatusParams {
+    @IsNumber()
+    userId: number;
+}
+
 export class UpdateSectorStatusParams {
 
     @IsString()
-    sectorId: string;
+    processInstanceId: string;
+
+    @IsString()
+    sectorInstanceId: string;
 
     @IsEnum(Status)
     status: Status;
@@ -83,9 +92,14 @@ export class UpdateSectorStatusParams {
 }
 
 export class ProcessInstanceStatusReturnedParams {
+    processInstanceId: string;
     name: string;
     description: string;
     creator: string;
     department: DepartmentType;
-
+    room: RoomType;
+    processStatus: Status;
+    processType: string;
+    sectorInstances: Object[];
+    currentSectorInstance: Object;
 }
