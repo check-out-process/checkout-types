@@ -27,6 +27,11 @@ export declare class CreateProcessInstanceFromTemplateParams {
 export declare class GetProcessInstanceStatusParams {
     userId: number;
 }
+export declare class UpdateSectorInstanceParams {
+    commitingWorkerId?: number;
+    responsiblePersonId?: number;
+    status: Status;
+}
 export declare class UpdateSectorStatusParams {
     processInstanceId: string;
     sectorInstanceId: string;
