@@ -1,4 +1,4 @@
-import { IsArray, IsEnum, IsNumber, IsObject, IsString, ValidateNested, isNumber } from "class-validator"
+import { IsArray, IsEnum, IsNumber, IsObject, IsOptional, IsString, ValidateNested, isNumber } from "class-validator"
 import { Type } from 'class-transformer'
 import { Status } from "../enums";
 import { DepartmentType } from "../types/Department";
@@ -73,6 +73,21 @@ export class CreateProcessInstanceFromTemplateParams {
 export class GetProcessInstanceStatusParams {
     @IsNumber()
     userId: number;
+}
+
+export class UpdateSectorInstanceParams {
+    @IsNumber()
+    @IsOptional()
+    commitingWorkerId?: number;
+
+    @IsNumber()
+    @IsOptional()
+    responsiblePersonId?: number;
+
+    @IsOptional()
+    @IsEnum(Status)
+    status: Status;
+
 }
 
 export class UpdateSectorStatusParams {
