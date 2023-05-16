@@ -12,6 +12,9 @@ export class UserCreationParams {
     username : string;
 
     @IsString()
+    password : string;
+
+    @IsString()
     jobId: string;
 
     @IsString()
@@ -20,6 +23,9 @@ export class UserCreationParams {
     //consider changing to string with number check
     @IsString()
     phoneNumber: string;
+
+    @IsString()
+    token: string;
 }
 
 export class UserPatchParams {
