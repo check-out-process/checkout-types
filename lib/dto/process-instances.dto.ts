@@ -3,6 +3,8 @@ import { Type } from 'class-transformer'
 import { Status } from "../enums";
 import { DepartmentType } from "../types/Department";
 import { RoomType } from "../types/Room";
+import { User } from "./users.dto";
+import { BedDTO } from "./beds.dto";
 
 
 
@@ -12,7 +14,7 @@ export type ProcessInstanceType = {
 
 export class NewSectorInstanceData {
     @IsString()
-    sectorId: string;
+    id: string;
     
     @IsNumber()
     workerId: number;
@@ -115,6 +117,19 @@ export class ProcessInstanceStatusReturnedParams {
     room: RoomType;
     processStatus: Status;
     processType: string;
-    sectorInstances: Object[];
-    currentSectorInstance: Object;
+    sectorInstances: SectorInstance[];
+    currentSectorInstance: SectorInstance;
+}
+
+export class SectorInstance {
+    instanceId: string;
+    sectorId: string;
+    name: string;
+    status: Status;
+    commitingWorker: User;
+    responsiblePerson: User; 
+    bed: BedDTO;
+    createdAt: Date;
+    updatedAt: Date;
+    endedAt: Date;
 }
