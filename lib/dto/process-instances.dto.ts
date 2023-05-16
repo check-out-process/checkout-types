@@ -117,8 +117,8 @@ export class ProcessInstanceStatusReturnedParams {
     room: RoomType;
     processStatus: Status;
     processType: string;
-    sectorInstances: SectorInstance[];
-    currentSectorInstance: SectorInstance;
+    sectorInstances: SectorInstance[] | Object[];
+    currentSectorInstance: SectorInstance | Object;
 }
 
 export class SectorInstance {
