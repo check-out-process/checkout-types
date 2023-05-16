@@ -1,5 +1,8 @@
 
-import { IsEnum, IsNumber, IsOptional, IsString } from "class-validator";
+import { IsNumber, IsOptional, IsString } from "class-validator";
+import { Job } from "./jobs.dto";
+import { Role } from "./roles.dto";
+import { Token } from "./token.dto";
 
 export class UserCreationParams {
     @IsNumber()
@@ -49,6 +52,13 @@ export class UserPatchAddSectorParams {
 }
 
 
-export type UserType = {
-    
+export type User = {
+    id : number;
+    fullname: string;
+    username : string;
+    phoneNumber: string;
+    password: string;
+    tokens?: Token[];
+    job: Job;
+    role: Role;
 }
