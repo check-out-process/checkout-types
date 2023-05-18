@@ -93,7 +93,6 @@ export class UpdateSectorInstanceParams {
 }
 
 export class UpdateSectorStatusParams {
-
     @IsString()
     processInstanceId: string;
 
@@ -102,10 +101,19 @@ export class UpdateSectorStatusParams {
 
     @IsEnum(Status)
     status: Status;
+}
 
-    // should be delivered by jwt
-    @IsNumber()
-    userId: number;
+export class ProcessInstanceStatusReturnedParamsUI {
+    processInstanceId: string;
+    name: string;
+    description: string;
+    creator: string;
+    department: DepartmentType;
+    room: RoomType;
+    processStatus: Status;
+    processType: string;
+    sectorInstances: SectorInstance[];
+    currentSectorInstance: SectorInstance;
 }
 
 export class ProcessInstanceStatusReturnedParams {
@@ -117,8 +125,8 @@ export class ProcessInstanceStatusReturnedParams {
     room: RoomType;
     processStatus: Status;
     processType: string;
-    sectorInstances: SectorInstance[] | Object[];
-    currentSectorInstance: SectorInstance | Object;
+    sectorInstances: Object[];
+    currentSectorInstance: Object;
 }
 
 export class SectorInstance {

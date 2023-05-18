@@ -51,6 +51,8 @@ export class UserPatchAddSectorParams {
     sectorId: string
 }
 
+export type UserType = {
+}
 
 export type User = {
     id : number;
