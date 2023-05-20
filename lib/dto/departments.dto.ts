@@ -12,5 +12,6 @@ export class DepartmentCreationParams {
 }
 
 export type DepartmentDTO = {
-
+    id: string;
+    name: string;
 }

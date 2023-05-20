@@ -5,6 +5,7 @@ import { DepartmentType } from "../types/Department";
 import { RoomType } from "../types/Room";
 import { User } from "./users.dto";
 import { BedDTO } from "./beds.dto";
+import { ProcessType } from "./process-templates.dto";
 
 
 
@@ -127,6 +128,24 @@ export class ProcessInstanceStatusReturnedParams {
     processType: string;
     sectorInstances: Object[];
     currentSectorInstance: Object;
+}
+
+export class ProcessInstance{
+    instanceId: string;
+    name: string;
+    description: string;
+    departmentId: string;
+    roomId: string;
+    processType: ProcessType;
+    sectorInstances: SectorInstance[];
+    status: Status;
+    sectorsOrder: string[]
+    creator: User;
+    bed: BedDTO;
+    createdAt: Date;
+    updatedAt: Date;
+    endedAt: Date;
+    isIsolation: boolean;
 }
 
 export class SectorInstance {
