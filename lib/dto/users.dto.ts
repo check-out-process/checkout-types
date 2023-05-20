@@ -26,9 +26,6 @@ export class UserCreationParams {
     //consider changing to string with number check
     @IsString()
     phoneNumber: string;
-
-    @IsString()
-    token: string;
 }
 
 export class UserPatchParams {
