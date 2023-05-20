@@ -1,4 +1,4 @@
-import { IsArray, IsEnum, IsNumber, IsObject, IsOptional, IsString, ValidateNested, isNumber } from "class-validator"
+import { IsArray, IsBoolean, IsEnum, IsNumber, IsOptional, IsString, ValidateNested } from "class-validator"
 import { Type } from 'class-transformer'
 import { Status } from "../enums";
 import { DepartmentType } from "../types/Department";
@@ -50,8 +50,8 @@ export class CreateProcessInstanceFromDataParams {
     @IsString()
     bedId: string;
 
-
-
+    @IsBoolean()
+    isIsolation: boolean;
 }
 
 export class CreateProcessInstanceFromTemplateParams {
