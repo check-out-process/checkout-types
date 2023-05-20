@@ -26,9 +26,6 @@ export class UserCreationParams {
     //consider changing to string with number check
     @IsString()
     phoneNumber: string;
-
-    @IsString()
-    token: string;
 }
 
 export class UserPatchParams {
@@ -51,6 +48,8 @@ export class UserPatchAddSectorParams {
     sectorId: string
 }
 
+export type UserType = {
+}
 
 export type User = {
     id : number;

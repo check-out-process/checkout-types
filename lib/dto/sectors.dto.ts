@@ -1,6 +1,6 @@
 import { IsString, IsNumber, IsOptional, IsArray, IsObject, ValidateNested } from "class-validator";
-import { ProcessTemplateType, ProcessType_Type } from "./process-templates.dto";
 import { UserType } from "./users.dto";
+import { ProcessTemplateType, ProcessType } from "./process-templates.dto";
 
 export type SectorType = {
     id: string;
@@ -9,7 +9,7 @@ export type SectorType = {
     responsibleUsers: Promise<UserType[]>
     committingUsers: Promise<UserType[]>; 
     relatedProcesses: ProcessTemplateType[];
-    processTypes: ProcessType_Type[]
+    processTypes: ProcessType[]
 
 }
 

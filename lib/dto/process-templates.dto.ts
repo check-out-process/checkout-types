@@ -1,4 +1,5 @@
 import { IsArray, IsNumber, IsOptional, IsString } from "class-validator";
+import { SectorType } from "./sectors.dto";
 
 export type ProcessTemplateType = {
 
@@ -6,6 +7,13 @@ export type ProcessTemplateType = {
 
 export type ProcessType_Type = {
 
+}
+
+export class ProcessType {
+    uuid: string;
+    id: number;
+    name: string;
+    relatedSectors: SectorType[];
 }
 
 export class AddProcessTemplateParams{

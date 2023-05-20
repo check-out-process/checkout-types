@@ -1,10 +1,11 @@
-import { IsArray, IsEnum, IsNumber, IsObject, IsOptional, IsString, ValidateNested, isNumber } from "class-validator"
+import { IsArray, IsBoolean, IsEnum, IsNumber, IsOptional, IsString, ValidateNested } from "class-validator"
 import { Type } from 'class-transformer'
 import { Status } from "../enums";
 import { DepartmentType } from "../types/Department";
 import { RoomType } from "../types/Room";
 import { User } from "./users.dto";
 import { BedDTO } from "./beds.dto";
+import { ProcessType } from "./process-templates.dto";
 
 
 
@@ -50,8 +51,8 @@ export class CreateProcessInstanceFromDataParams {
     @IsString()
     bedId: string;
 
-
-
+    @IsBoolean()
+    isIsolation: boolean;
 }
 
 export class CreateProcessInstanceFromTemplateParams {
@@ -93,7 +94,6 @@ export class UpdateSectorInstanceParams {
 }
 
 export class UpdateSectorStatusParams {
-
     @IsString()
     processInstanceId: string;
 
@@ -102,10 +102,19 @@ export class UpdateSectorStatusParams {
 
     @IsEnum(Status)
     status: Status;
+}
 
-    // should be delivered by jwt
-    @IsNumber()
-    userId: number;
+export class ProcessInstanceStatusReturnedParamsUI {
+    processInstanceId: string;
+    name: string;
+    description: string;
+    creator: string;
+    department: DepartmentType;
+    room: RoomType;
+    processStatus: Status;
+    processType: string;
+    sectorInstances: SectorInstance[];
+    currentSectorInstance: SectorInstance;
 }
 
 export class ProcessInstanceStatusReturnedParams {
@@ -117,8 +126,26 @@ export class ProcessInstanceStatusReturnedParams {
     room: RoomType;
     processStatus: Status;
     processType: string;
-    sectorInstances: SectorInstance[] | Object[];
-    currentSectorInstance: SectorInstance | Object;
+    sectorInstances: Object[];
+    currentSectorInstance: Object;
+}
+
+export class ProcessInstance{
+    instanceId: string;
+    name: string;
+    description: string;
+    departmentId: string;
+    roomId: string;
+    processType: ProcessType;
+    sectorInstances: SectorInstance[];
+    status: Status;
+    sectorsOrder: string[]
+    creator: User;
+    bed: BedDTO;
+    createdAt: Date;
+    updatedAt: Date;
+    endedAt: Date;
+    isIsolation: boolean;
 }
 
 export class SectorInstance {
