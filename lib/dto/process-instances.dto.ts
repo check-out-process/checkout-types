@@ -6,6 +6,7 @@ import { RoomType } from "../types/Room";
 import { User } from "./users.dto";
 import { BedDTO } from "./beds.dto";
 import { ProcessType } from "./process-templates.dto";
+import { DepartmentDTO } from "./departments.dto";
 
 
 
@@ -31,8 +32,8 @@ export class CreateProcessInstanceFromDataParams {
     @IsString()
     description: string;
 
-    @IsNumber()
-    processType: number;
+    @IsString()
+    processTypeId: string;
 
     @IsArray()
     @ValidateNested({each: true})
@@ -134,8 +135,8 @@ export class ProcessInstance{
     instanceId: string;
     name: string;
     description: string;
-    departmentId: string;
-    roomId: string;
+    department: DepartmentDTO;
+    room: RoomType;
     processType: ProcessType;
     sectorInstances: SectorInstance[];
     status: Status;
@@ -154,7 +155,7 @@ export class SectorInstance {
     name: string;
     status: Status;
     commitingWorker: User;
-    responsiblePerson: User; 
+    responsiblePerson?: User; 
     bed: BedDTO;
     createdAt: Date;
     updatedAt: Date;
