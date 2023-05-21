@@ -18,12 +18,17 @@ export class SectorCreationParams {
     name: string;
 
     @IsNumber()
-    defaultResponsibleUserId: number;
+    @IsOptional()
+    defaultResponsibleUserId?: number;
 
     @IsArray()
     @IsNumber({}, {each: true})
     @IsOptional()
     responsibleUsersIds?: number[];
+
+    @IsNumber()
+    @IsOptional()
+    defaultCommittingUsersId?: number;
 
     @IsArray()
     @IsNumber({}, {each: true})
@@ -61,6 +66,10 @@ export class SectorPatchParams {
     @IsNumber({}, {each: true})
     @IsOptional()
     responsibleUsersIds?: number[];
+
+    @IsNumber()
+    @IsOptional()
+    defaultCommittingUsersId?: number;
 
     @IsArray()
     @IsNumber({}, {each: true})
