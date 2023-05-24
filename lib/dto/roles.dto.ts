@@ -5,7 +5,7 @@ export class CreateRoleParams {
     name: string;
 }
 
-export class Role {
+export class RoleDTO {
     id: string;
     name: string;
 }

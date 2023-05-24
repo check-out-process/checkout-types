@@ -13,3 +13,9 @@ export class RoomPatchParams {
     @IsOptional()
     name?: string;
 }
+
+export type RoomDTO = {
+    id: string;
+    name: string,
+    departmentId: string;
+}

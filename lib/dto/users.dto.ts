@@ -1,7 +1,7 @@
 
 import { IsNumber, IsOptional, IsString } from "class-validator";
 import { Job } from "./jobs.dto";
-import { Role } from "./roles.dto";
+import { RoleDTO } from "./roles.dto";
 import { Token } from "./token.dto";
 
 export class UserCreationParams {
@@ -48,9 +48,6 @@ export class UserPatchAddSectorParams {
     sectorId: string
 }
 
-export type UserType = {
-}
-
 export type User = {
     id : number;
     fullname: string;
@@ -59,5 +56,5 @@ export type User = {
     password: string;
     tokens?: Token[];
     job: Job;
-    role: Role;
+    role: RoleDTO;
 }

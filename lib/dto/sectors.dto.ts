@@ -1,16 +1,16 @@
-import { IsString, IsNumber, IsOptional, IsArray, IsObject, ValidateNested } from "class-validator";
-import { UserType } from "./users.dto";
+import { IsString, IsNumber, IsOptional, IsArray } from "class-validator";
 import { ProcessTemplateType, ProcessType } from "./process-templates.dto";
+import { User } from "./users.dto";
 
-export type SectorType = {
+export type Sector = {
     id: string;
     name: string;
-    defaultResponsibleUser: UserType;
-    responsibleUsers: Promise<UserType[]>
-    committingUsers: Promise<UserType[]>; 
+    defaultResponsibleUser?: User;
+    defaultCommittingUser?: User;
+    responsibleUsers?: User[];
+    committingUsers: User[];
     relatedProcesses: ProcessTemplateType[];
     processTypes: ProcessType[]
-
 }
 
 export class SectorCreationParams {

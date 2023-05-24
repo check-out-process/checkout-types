@@ -1,5 +1,5 @@
 export enum Status {
-    Waiting = 'waiting',
-    In_Progress = 'inProgress',
-    Done = 'done'
+    Waiting = 'מחכה לשיבוץ',
+    In_Progress = 'בתהליך',
+    Done = 'הסתיים'
 }
