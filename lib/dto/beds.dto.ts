@@ -34,9 +34,8 @@ export class BedPatchParams {
     roomId?: string;
 }
 
-//Change properties, keep convention
 export type BedDTO = {
-    id: number;
+    id: string;
     uuid: string;
     name: string
     departmentId: string;
