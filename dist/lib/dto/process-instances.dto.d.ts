@@ -1,21 +1,26 @@
 import { Status } from "../enums";
 import { DepartmentType } from "../types/Department";
 import { RoomType } from "../types/Room";
+import { User } from "./users.dto";
+import { BedDTO } from "./beds.dto";
+import { ProcessType } from "./process-templates.dto";
+import { DepartmentDTO } from "./departments.dto";
 export type ProcessInstanceType = {};
 export declare class NewSectorInstanceData {
-    sectorId: string;
+    id: string;
     workerId: number;
     responsibleUserId: number;
 }
 export declare class CreateProcessInstanceFromDataParams {
     name: string;
     description: string;
-    processType: number;
+    processTypeId: string;
     orderedSectors: NewSectorInstanceData[];
     creatorId: number;
     departmentId: string;
     roomId: string;
     bedId: string;
+    isIsolation: boolean;
 }
 export declare class CreateProcessInstanceFromTemplateParams {
     templateId: string;
@@ -36,7 +41,18 @@ export declare class UpdateSectorStatusParams {
     processInstanceId: string;
     sectorInstanceId: string;
     status: Status;
-    userId: number;
+}
+export declare class ProcessInstanceStatusReturnedParamsUI {
+    processInstanceId: string;
+    name: string;
+    description: string;
+    creator: string;
+    department: DepartmentType;
+    room: RoomType;
+    processStatus: Status;
+    processType: string;
+    sectorInstances: SectorInstance[];
+    currentSectorInstance: SectorInstance;
 }
 export declare class ProcessInstanceStatusReturnedParams {
     processInstanceId: string;
@@ -49,4 +65,33 @@ export declare class ProcessInstanceStatusReturnedParams {
     processType: string;
     sectorInstances: Object[];
     currentSectorInstance: Object;
+}
+export declare class ProcessInstance {
+    instanceId: string;
+    name: string;
+    description: string;
+    department: DepartmentDTO;
+    room: RoomType;
+    processType: ProcessType;
+    sectorInstances: SectorInstance[];
+    status: Status;
+    sectorsOrder: string[];
+    creator: User;
+    bed: BedDTO;
+    createdAt: Date;
+    updatedAt: Date;
+    endedAt: Date;
+    isIsolation: boolean;
+}
+export declare class SectorInstance {
+    instanceId: string;
+    sectorId: string;
+    name: string;
+    status: Status;
+    commitingWorker: User;
+    responsiblePerson?: User;
+    bed: BedDTO;
+    createdAt: Date;
+    updatedAt: Date;
+    endedAt: Date;
 }

@@ -23,3 +23,4 @@ __exportStar(require("./sectors.dto"), exports);
 __exportStar(require("./users.dto"), exports);
 __exportStar(require("./jobs.dto"), exports);
 __exportStar(require("./roles.dto"), exports);
+__exportStar(require("./auth.dto"), exports);

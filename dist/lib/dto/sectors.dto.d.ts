@@ -1,18 +1,20 @@
-import { ProcessTemplateType, ProcessType_Type } from "./process-templates.dto";
-import { UserType } from "./users.dto";
-export type SectorType = {
+import { ProcessTemplateType, ProcessType } from "./process-templates.dto";
+import { User } from "./users.dto";
+export type Sector = {
     id: string;
     name: string;
-    defaultResponsibleUser: UserType;
-    responsibleUsers: Promise<UserType[]>;
-    committingUsers: Promise<UserType[]>;
+    defaultResponsibleUser?: User;
+    defaultCommittingUser?: User;
+    responsibleUsers?: User[];
+    committingUsers: User[];
     relatedProcesses: ProcessTemplateType[];
-    processTypes: ProcessType_Type[];
+    processTypes: ProcessType[];
 };
 export declare class SectorCreationParams {
     name: string;
-    defaultResponsibleUserId: number;
+    defaultResponsibleUserId?: number;
     responsibleUsersIds?: number[];
+    defaultCommittingUsersId?: number;
     committingUsersIds?: number[];
     processTypes?: number[];
     relatedProcessIds?: string[];
@@ -24,6 +26,7 @@ export declare class SectorPatchParams {
     name?: string;
     defaultResponsibleUserId?: number;
     responsibleUsersIds?: number[];
+    defaultCommittingUsersId?: number;
     committingUsersIds?: number[];
     processTypes?: number[];
     relatedProcessIds?: string[];

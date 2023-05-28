@@ -6,7 +6,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ProcessInstanceStatusReturnedParams = exports.UpdateSectorStatusParams = exports.UpdateSectorInstanceParams = exports.GetProcessInstanceStatusParams = exports.CreateProcessInstanceFromTemplateParams = exports.CreateProcessInstanceFromDataParams = exports.NewSectorInstanceData = void 0;
+exports.SectorInstance = exports.ProcessInstance = exports.ProcessInstanceStatusReturnedParams = exports.ProcessInstanceStatusReturnedParamsUI = exports.UpdateSectorStatusParams = exports.UpdateSectorInstanceParams = exports.GetProcessInstanceStatusParams = exports.CreateProcessInstanceFromTemplateParams = exports.CreateProcessInstanceFromDataParams = exports.NewSectorInstanceData = void 0;
 const class_validator_1 = require("class-validator");
 const class_transformer_1 = require("class-transformer");
 const enums_1 = require("../enums");
@@ -14,7 +14,7 @@ class NewSectorInstanceData {
 }
 __decorate([
     (0, class_validator_1.IsString)()
-], NewSectorInstanceData.prototype, "sectorId", void 0);
+], NewSectorInstanceData.prototype, "id", void 0);
 __decorate([
     (0, class_validator_1.IsNumber)()
 ], NewSectorInstanceData.prototype, "workerId", void 0);
@@ -31,8 +31,8 @@ __decorate([
     (0, class_validator_1.IsString)()
 ], CreateProcessInstanceFromDataParams.prototype, "description", void 0);
 __decorate([
-    (0, class_validator_1.IsNumber)()
-], CreateProcessInstanceFromDataParams.prototype, "processType", void 0);
+    (0, class_validator_1.IsString)()
+], CreateProcessInstanceFromDataParams.prototype, "processTypeId", void 0);
 __decorate([
     (0, class_validator_1.IsArray)(),
     (0, class_validator_1.ValidateNested)({ each: true }),
@@ -50,6 +50,9 @@ __decorate([
 __decorate([
     (0, class_validator_1.IsString)()
 ], CreateProcessInstanceFromDataParams.prototype, "bedId", void 0);
+__decorate([
+    (0, class_validator_1.IsBoolean)()
+], CreateProcessInstanceFromDataParams.prototype, "isIsolation", void 0);
 exports.CreateProcessInstanceFromDataParams = CreateProcessInstanceFromDataParams;
 class CreateProcessInstanceFromTemplateParams {
 }
@@ -101,10 +104,16 @@ __decorate([
 __decorate([
     (0, class_validator_1.IsEnum)(enums_1.Status)
 ], UpdateSectorStatusParams.prototype, "status", void 0);
-__decorate([
-    (0, class_validator_1.IsNumber)()
-], UpdateSectorStatusParams.prototype, "userId", void 0);
 exports.UpdateSectorStatusParams = UpdateSectorStatusParams;
+class ProcessInstanceStatusReturnedParamsUI {
+}
+exports.ProcessInstanceStatusReturnedParamsUI = ProcessInstanceStatusReturnedParamsUI;
 class ProcessInstanceStatusReturnedParams {
 }
 exports.ProcessInstanceStatusReturnedParams = ProcessInstanceStatusReturnedParams;
+class ProcessInstance {
+}
+exports.ProcessInstance = ProcessInstance;
+class SectorInstance {
+}
+exports.SectorInstance = SectorInstance;

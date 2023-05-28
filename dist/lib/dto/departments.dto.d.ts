@@ -4,4 +4,7 @@ export declare class DepartmentPatchParams {
 export declare class DepartmentCreationParams {
     name: string;
 }
-export type DepartmentDTO = {};
+export type DepartmentDTO = {
+    id: string;
+    name: string;
+};
