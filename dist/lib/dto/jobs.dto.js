@@ -6,7 +6,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CreateJobParams = void 0;
+exports.Job = exports.CreateJobParams = void 0;
 const class_validator_1 = require("class-validator");
 class CreateJobParams {
 }
@@ -14,3 +14,6 @@ __decorate([
     (0, class_validator_1.IsString)()
 ], CreateJobParams.prototype, "name", void 0);
 exports.CreateJobParams = CreateJobParams;
+class Job {
+}
+exports.Job = Job;

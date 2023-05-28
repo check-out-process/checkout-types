@@ -21,6 +21,9 @@ __decorate([
 ], UserCreationParams.prototype, "username", void 0);
 __decorate([
     (0, class_validator_1.IsString)()
+], UserCreationParams.prototype, "password", void 0);
+__decorate([
+    (0, class_validator_1.IsString)()
 ], UserCreationParams.prototype, "jobId", void 0);
 __decorate([
     (0, class_validator_1.IsString)()

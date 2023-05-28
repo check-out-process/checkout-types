@@ -14,13 +14,18 @@ __decorate([
     (0, class_validator_1.IsString)()
 ], SectorCreationParams.prototype, "name", void 0);
 __decorate([
-    (0, class_validator_1.IsNumber)()
+    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.IsOptional)()
 ], SectorCreationParams.prototype, "defaultResponsibleUserId", void 0);
 __decorate([
     (0, class_validator_1.IsArray)(),
     (0, class_validator_1.IsNumber)({}, { each: true }),
     (0, class_validator_1.IsOptional)()
 ], SectorCreationParams.prototype, "responsibleUsersIds", void 0);
+__decorate([
+    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.IsOptional)()
+], SectorCreationParams.prototype, "defaultCommittingUsersId", void 0);
 __decorate([
     (0, class_validator_1.IsArray)(),
     (0, class_validator_1.IsNumber)({}, { each: true }),
@@ -59,6 +64,10 @@ __decorate([
     (0, class_validator_1.IsNumber)({}, { each: true }),
     (0, class_validator_1.IsOptional)()
 ], SectorPatchParams.prototype, "responsibleUsersIds", void 0);
+__decorate([
+    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.IsOptional)()
+], SectorPatchParams.prototype, "defaultCommittingUsersId", void 0);
 __decorate([
     (0, class_validator_1.IsArray)(),
     (0, class_validator_1.IsNumber)({}, { each: true }),

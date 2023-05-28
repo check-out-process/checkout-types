@@ -11,7 +11,7 @@ export declare class BedPatchParams {
     roomId?: string;
 }
 export type BedDTO = {
-    id: number;
+    id: string;
     uuid: string;
     name: string;
     departmentId: string;

@@ -1,3 +1,6 @@
+import { Job } from "./jobs.dto";
+import { RoleDTO } from "./roles.dto";
+import { Token } from "./token.dto";
 export declare class UserCreationParams {
     id: number;
     fullname: string;
@@ -7,17 +10,6 @@ export declare class UserCreationParams {
     roleId: string;
     phoneNumber: string;
 }
-
-export declare class UserCreationRes {
-    id: number;
-    fullname: string;
-    username: string;
-    password: string;
-    jobId: string;
-    roleId: string;
-    phoneNumber: string;
-    token:string;
-}
 export declare class UserPatchParams {
     jobId?: string;
     roleId?: string;
@@ -26,4 +18,13 @@ export declare class UserPatchParams {
 export declare class UserPatchAddSectorParams {
     sectorId: string;
 }
-export type UserType = {};
+export type User = {
+    id: number;
+    fullname: string;
+    username: string;
+    phoneNumber: string;
+    password: string;
+    tokens?: Token[];
+    job: Job;
+    role: RoleDTO;
+};
