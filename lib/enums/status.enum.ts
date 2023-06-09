@@ -1,5 +1,6 @@
 export enum Status {
-    Waiting = 'מחכה לשיבוץ',
+    Waiting_Assigning = 'מחכה לשיבוץ',
+    Waiting_Confirm = 'מחכה לאישור',
     In_Progress = 'בתהליך',
     Done = 'הסתיים'
 }
