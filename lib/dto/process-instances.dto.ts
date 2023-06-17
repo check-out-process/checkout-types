@@ -21,6 +21,7 @@ export class NewSectorInstanceData {
     @IsNumber()
     workerId: number;
     
+    @IsOptional()
     @IsNumber()
     responsibleUserId?: number;
 }
