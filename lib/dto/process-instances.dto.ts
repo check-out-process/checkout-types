@@ -22,7 +22,7 @@ export class NewSectorInstanceData {
     workerId: number;
     
     @IsNumber()
-    responsibleUserId: number;
+    responsibleUserId?: number;
 }
 
 export class CreateProcessInstanceFromDataParams {

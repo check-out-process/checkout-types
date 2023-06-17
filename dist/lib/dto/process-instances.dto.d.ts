@@ -9,7 +9,7 @@ export type ProcessInstanceType = {};
 export declare class NewSectorInstanceData {
     id: string;
     workerId: number;
-    responsibleUserId: number;
+    responsibleUserId?: number;
 }
 export declare class CreateProcessInstanceFromDataParams {
     name: string;
