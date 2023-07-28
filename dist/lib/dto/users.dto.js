@@ -8,27 +8,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.UserPatchAddSectorParams = exports.UserPatchParams = exports.UserCreationParams = void 0;
 const class_validator_1 = require("class-validator");
+const swagger_1 = require("@nestjs/swagger");
 class UserCreationParams {
 }
 __decorate([
+    (0, swagger_1.ApiProperty)({ type: String }),
     (0, class_validator_1.IsNumber)()
 ], UserCreationParams.prototype, "id", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({ type: String }),
     (0, class_validator_1.IsString)()
 ], UserCreationParams.prototype, "fullname", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({ type: String }),
     (0, class_validator_1.IsString)()
 ], UserCreationParams.prototype, "username", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({ type: String }),
     (0, class_validator_1.IsString)()
 ], UserCreationParams.prototype, "password", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({ type: String }),
     (0, class_validator_1.IsString)()
 ], UserCreationParams.prototype, "jobId", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({ type: String }),
     (0, class_validator_1.IsString)()
 ], UserCreationParams.prototype, "roleId", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({ type: String }),
     (0, class_validator_1.IsString)()
 ], UserCreationParams.prototype, "phoneNumber", void 0);
 exports.UserCreationParams = UserCreationParams;
