@@ -8,39 +8,48 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AddProcessTypeParams = exports.PatchProcessTemplateParams = exports.AddProcessTemplateParams = exports.ProcessType = void 0;
 const class_validator_1 = require("class-validator");
+const swagger_1 = require("@nestjs/swagger");
 class ProcessType {
 }
 exports.ProcessType = ProcessType;
 class AddProcessTemplateParams {
 }
 __decorate([
+    (0, swagger_1.ApiProperty)({ type: String }),
     (0, class_validator_1.IsString)()
 ], AddProcessTemplateParams.prototype, "name", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({ type: String }),
     (0, class_validator_1.IsString)()
 ], AddProcessTemplateParams.prototype, "description", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({ type: Number }),
     (0, class_validator_1.IsNumber)()
 ], AddProcessTemplateParams.prototype, "processType", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({ type: [String] }),
     (0, class_validator_1.IsArray)()
 ], AddProcessTemplateParams.prototype, "relatedSectors_ids", void 0);
 exports.AddProcessTemplateParams = AddProcessTemplateParams;
 class PatchProcessTemplateParams {
 }
 __decorate([
+    (0, swagger_1.ApiPropertyOptional)({ type: String }),
     (0, class_validator_1.IsString)(),
     (0, class_validator_1.IsOptional)()
 ], PatchProcessTemplateParams.prototype, "name", void 0);
 __decorate([
+    (0, swagger_1.ApiPropertyOptional)({ type: String }),
     (0, class_validator_1.IsString)(),
     (0, class_validator_1.IsOptional)()
 ], PatchProcessTemplateParams.prototype, "description", void 0);
 __decorate([
+    (0, swagger_1.ApiPropertyOptional)({ type: Number }),
     (0, class_validator_1.IsNumber)(),
     (0, class_validator_1.IsOptional)()
 ], PatchProcessTemplateParams.prototype, "processType", void 0);
 __decorate([
+    (0, swagger_1.ApiPropertyOptional)({ type: [String] }),
     (0, class_validator_1.IsArray)(),
     (0, class_validator_1.IsOptional)()
 ], PatchProcessTemplateParams.prototype, "relatedSectors_ids", void 0);
@@ -48,6 +57,7 @@ exports.PatchProcessTemplateParams = PatchProcessTemplateParams;
 class AddProcessTypeParams {
 }
 __decorate([
+    (0, swagger_1.ApiProperty)({ type: String }),
     (0, class_validator_1.IsString)()
 ], AddProcessTypeParams.prototype, "name", void 0);
 exports.AddProcessTypeParams = AddProcessTypeParams;

@@ -10,15 +10,19 @@ exports.SectorInstance = exports.ProcessInstance = exports.ProcessInstanceStatus
 const class_validator_1 = require("class-validator");
 const class_transformer_1 = require("class-transformer");
 const enums_1 = require("../enums");
+const swagger_1 = require("@nestjs/swagger");
 class NewSectorInstanceData {
 }
 __decorate([
+    (0, swagger_1.ApiProperty)({ type: String }),
     (0, class_validator_1.IsString)()
 ], NewSectorInstanceData.prototype, "id", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({ type: Number }),
     (0, class_validator_1.IsNumber)()
 ], NewSectorInstanceData.prototype, "workerId", void 0);
 __decorate([
+    (0, swagger_1.ApiPropertyOptional)({ type: String }),
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsNumber)()
 ], NewSectorInstanceData.prototype, "responsibleUserId", void 0);
@@ -26,70 +30,88 @@ exports.NewSectorInstanceData = NewSectorInstanceData;
 class CreateProcessInstanceFromDataParams {
 }
 __decorate([
+    (0, swagger_1.ApiProperty)({ type: String }),
     (0, class_validator_1.IsString)()
 ], CreateProcessInstanceFromDataParams.prototype, "name", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({ type: String }),
     (0, class_validator_1.IsString)()
 ], CreateProcessInstanceFromDataParams.prototype, "description", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({ type: String }),
     (0, class_validator_1.IsString)()
 ], CreateProcessInstanceFromDataParams.prototype, "processTypeId", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({ type: [() => NewSectorInstanceData] }),
     (0, class_validator_1.IsArray)(),
     (0, class_validator_1.ValidateNested)({ each: true }),
     (0, class_transformer_1.Type)(() => NewSectorInstanceData)
 ], CreateProcessInstanceFromDataParams.prototype, "orderedSectors", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({ type: Number }),
     (0, class_validator_1.IsNumber)()
 ], CreateProcessInstanceFromDataParams.prototype, "creatorId", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({ type: String }),
     (0, class_validator_1.IsString)()
 ], CreateProcessInstanceFromDataParams.prototype, "departmentId", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({ type: String }),
     (0, class_validator_1.IsString)()
 ], CreateProcessInstanceFromDataParams.prototype, "roomId", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({ type: String }),
     (0, class_validator_1.IsString)()
 ], CreateProcessInstanceFromDataParams.prototype, "bedId", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({ type: Boolean }),
     (0, class_validator_1.IsBoolean)()
 ], CreateProcessInstanceFromDataParams.prototype, "isIsolation", void 0);
 exports.CreateProcessInstanceFromDataParams = CreateProcessInstanceFromDataParams;
 class CreateProcessInstanceFromTemplateParams {
 }
 __decorate([
+    (0, swagger_1.ApiProperty)({ type: String }),
     (0, class_validator_1.IsString)()
 ], CreateProcessInstanceFromTemplateParams.prototype, "templateId", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({ type: Number }),
     (0, class_validator_1.IsNumber)()
 ], CreateProcessInstanceFromTemplateParams.prototype, "creatorId", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({ type: String }),
     (0, class_validator_1.IsString)()
 ], CreateProcessInstanceFromTemplateParams.prototype, "bedId", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({ type: String }),
     (0, class_validator_1.IsString)()
 ], CreateProcessInstanceFromTemplateParams.prototype, "departmentId", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({ type: String }),
     (0, class_validator_1.IsString)()
 ], CreateProcessInstanceFromTemplateParams.prototype, "roomId", void 0);
 exports.CreateProcessInstanceFromTemplateParams = CreateProcessInstanceFromTemplateParams;
 class GetProcessInstanceStatusParams {
 }
 __decorate([
+    (0, swagger_1.ApiProperty)({ type: Number }),
     (0, class_validator_1.IsNumber)()
 ], GetProcessInstanceStatusParams.prototype, "userId", void 0);
 exports.GetProcessInstanceStatusParams = GetProcessInstanceStatusParams;
 class UpdateSectorInstanceParams {
 }
 __decorate([
+    (0, swagger_1.ApiPropertyOptional)({ type: Number }),
     (0, class_validator_1.IsNumber)(),
     (0, class_validator_1.IsOptional)()
 ], UpdateSectorInstanceParams.prototype, "commitingWorkerId", void 0);
 __decorate([
+    (0, swagger_1.ApiPropertyOptional)({ type: Number }),
     (0, class_validator_1.IsNumber)(),
     (0, class_validator_1.IsOptional)()
 ], UpdateSectorInstanceParams.prototype, "responsiblePersonId", void 0);
 __decorate([
+    (0, swagger_1.ApiPropertyOptional)({ enum: enums_1.Status }),
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsEnum)(enums_1.Status)
 ], UpdateSectorInstanceParams.prototype, "status", void 0);
@@ -97,12 +119,15 @@ exports.UpdateSectorInstanceParams = UpdateSectorInstanceParams;
 class UpdateSectorStatusParams {
 }
 __decorate([
+    (0, swagger_1.ApiProperty)({ type: String }),
     (0, class_validator_1.IsString)()
 ], UpdateSectorStatusParams.prototype, "processInstanceId", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({ type: String }),
     (0, class_validator_1.IsString)()
 ], UpdateSectorStatusParams.prototype, "sectorInstanceId", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({ enum: enums_1.Status }),
     (0, class_validator_1.IsEnum)(enums_1.Status)
 ], UpdateSectorStatusParams.prototype, "status", void 0);
 exports.UpdateSectorStatusParams = UpdateSectorStatusParams;

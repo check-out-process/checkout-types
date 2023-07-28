@@ -3,7 +3,7 @@ import { IsNumber, IsOptional, IsString } from "class-validator";
 import { Job } from "./jobs.dto";
 import { RoleDTO } from "./roles.dto";
 import { Token } from "./token.dto";
-import {ApiProperty} from '@nestjs/swagger';
+import {ApiProperty, ApiPropertyOptional} from '@nestjs/swagger';
 
 export class UserCreationParams {
     @ApiProperty({type: String})
@@ -38,17 +38,17 @@ export class UserCreationParams {
 
 export class UserPatchParams {
 
-    @ApiProperty({type: String})
+    @ApiPropertyOptional({type: String})
     @IsString()
     @IsOptional()
     jobId?: string;
 
-    @ApiProperty({type: String})
+    @ApiPropertyOptional({type: String})
     @IsString()
     @IsOptional()
     roleId?: string;
 
-    @ApiProperty({type: String})
+    @ApiPropertyOptional({type: String})
     @IsNumber()
     @IsOptional()
     phoneNumber?: number;

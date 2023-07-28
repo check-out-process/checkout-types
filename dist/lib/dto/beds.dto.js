@@ -7,37 +7,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.BedPatchParams = exports.BedCreationParams = void 0;
+const swagger_1 = require("@nestjs/swagger");
 const class_validator_1 = require("class-validator");
 class BedCreationParams {
 }
 __decorate([
+    (0, swagger_1.ApiProperty)({ type: String }),
     (0, class_validator_1.IsString)()
 ], BedCreationParams.prototype, "textQR", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({ type: String }),
     (0, class_validator_1.IsString)()
 ], BedCreationParams.prototype, "name", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({ type: String }),
     (0, class_validator_1.IsString)()
 ], BedCreationParams.prototype, "departmentId", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({ type: String }),
     (0, class_validator_1.IsString)()
 ], BedCreationParams.prototype, "roomId", void 0);
 exports.BedCreationParams = BedCreationParams;
 class BedPatchParams {
 }
 __decorate([
+    (0, swagger_1.ApiPropertyOptional)({ type: String }),
     (0, class_validator_1.IsString)(),
     (0, class_validator_1.IsOptional)()
 ], BedPatchParams.prototype, "textQR", void 0);
 __decorate([
+    (0, swagger_1.ApiPropertyOptional)({ type: String }),
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsString)()
 ], BedPatchParams.prototype, "name", void 0);
 __decorate([
+    (0, swagger_1.ApiPropertyOptional)({ type: String }),
     (0, class_validator_1.IsString)(),
     (0, class_validator_1.IsOptional)()
 ], BedPatchParams.prototype, "departmentId", void 0);
 __decorate([
+    (0, swagger_1.ApiPropertyOptional)({ type: String }),
     (0, class_validator_1.IsString)(),
     (0, class_validator_1.IsOptional)()
 ], BedPatchParams.prototype, "roomId", void 0);

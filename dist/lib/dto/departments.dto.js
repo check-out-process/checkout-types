@@ -7,10 +7,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.DepartmentCreationParams = exports.DepartmentPatchParams = void 0;
+const swagger_1 = require("@nestjs/swagger");
 const class_validator_1 = require("class-validator");
 class DepartmentPatchParams {
 }
 __decorate([
+    (0, swagger_1.ApiPropertyOptional)({ type: String }),
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsString)()
 ], DepartmentPatchParams.prototype, "name", void 0);
@@ -18,6 +20,7 @@ exports.DepartmentPatchParams = DepartmentPatchParams;
 class DepartmentCreationParams {
 }
 __decorate([
+    (0, swagger_1.ApiProperty)({ type: String }),
     (0, class_validator_1.IsString)()
 ], DepartmentCreationParams.prototype, "name", void 0);
 exports.DepartmentCreationParams = DepartmentCreationParams;

@@ -8,35 +8,43 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SectorPatchAddResponsiblesParams = exports.SectorPatchAddUsersParams = exports.SectorPatchParams = exports.SectorQueryParams = exports.SectorCreationParams = void 0;
 const class_validator_1 = require("class-validator");
+const swagger_1 = require("@nestjs/swagger");
 class SectorCreationParams {
 }
 __decorate([
+    (0, swagger_1.ApiProperty)({ type: String }),
     (0, class_validator_1.IsString)()
 ], SectorCreationParams.prototype, "name", void 0);
 __decorate([
+    (0, swagger_1.ApiPropertyOptional)({ type: Number }),
     (0, class_validator_1.IsNumber)(),
     (0, class_validator_1.IsOptional)()
 ], SectorCreationParams.prototype, "defaultResponsibleUserId", void 0);
 __decorate([
+    (0, swagger_1.ApiPropertyOptional)({ type: [Number] }),
     (0, class_validator_1.IsArray)(),
     (0, class_validator_1.IsNumber)({}, { each: true }),
     (0, class_validator_1.IsOptional)()
 ], SectorCreationParams.prototype, "responsibleUsersIds", void 0);
 __decorate([
+    (0, swagger_1.ApiPropertyOptional)({ type: Number }),
     (0, class_validator_1.IsNumber)(),
     (0, class_validator_1.IsOptional)()
 ], SectorCreationParams.prototype, "defaultCommittingUsersId", void 0);
 __decorate([
+    (0, swagger_1.ApiPropertyOptional)({ type: [Number] }),
     (0, class_validator_1.IsArray)(),
     (0, class_validator_1.IsNumber)({}, { each: true }),
     (0, class_validator_1.IsOptional)()
 ], SectorCreationParams.prototype, "committingUsersIds", void 0);
 __decorate([
+    (0, swagger_1.ApiPropertyOptional)({ type: [Number] }),
     (0, class_validator_1.IsArray)(),
     (0, class_validator_1.IsNumber)({}, { each: true }),
     (0, class_validator_1.IsOptional)()
 ], SectorCreationParams.prototype, "processTypes", void 0);
 __decorate([
+    (0, swagger_1.ApiPropertyOptional)({ type: [String] }),
     (0, class_validator_1.IsArray)(),
     (0, class_validator_1.IsString)({ each: true }),
     (0, class_validator_1.IsOptional)()
@@ -45,6 +53,7 @@ exports.SectorCreationParams = SectorCreationParams;
 class SectorQueryParams {
 }
 __decorate([
+    (0, swagger_1.ApiPropertyOptional)({ type: Number }),
     (0, class_validator_1.IsNumber)(),
     (0, class_validator_1.IsOptional)()
 ], SectorQueryParams.prototype, "processtype", void 0);
@@ -52,33 +61,40 @@ exports.SectorQueryParams = SectorQueryParams;
 class SectorPatchParams {
 }
 __decorate([
+    (0, swagger_1.ApiPropertyOptional)({ type: String }),
     (0, class_validator_1.IsString)(),
     (0, class_validator_1.IsOptional)()
 ], SectorPatchParams.prototype, "name", void 0);
 __decorate([
+    (0, swagger_1.ApiPropertyOptional)({ type: Number }),
     (0, class_validator_1.IsNumber)(),
     (0, class_validator_1.IsOptional)()
 ], SectorPatchParams.prototype, "defaultResponsibleUserId", void 0);
 __decorate([
+    (0, swagger_1.ApiPropertyOptional)({ type: [Number] }),
     (0, class_validator_1.IsArray)(),
     (0, class_validator_1.IsNumber)({}, { each: true }),
     (0, class_validator_1.IsOptional)()
 ], SectorPatchParams.prototype, "responsibleUsersIds", void 0);
 __decorate([
+    (0, swagger_1.ApiPropertyOptional)({ type: Number }),
     (0, class_validator_1.IsNumber)(),
     (0, class_validator_1.IsOptional)()
 ], SectorPatchParams.prototype, "defaultCommittingUsersId", void 0);
 __decorate([
+    (0, swagger_1.ApiPropertyOptional)({ type: [Number] }),
     (0, class_validator_1.IsArray)(),
     (0, class_validator_1.IsNumber)({}, { each: true }),
     (0, class_validator_1.IsOptional)()
 ], SectorPatchParams.prototype, "committingUsersIds", void 0);
 __decorate([
+    (0, swagger_1.ApiPropertyOptional)({ type: [Number] }),
     (0, class_validator_1.IsArray)(),
     (0, class_validator_1.IsNumber)({}, { each: true }),
     (0, class_validator_1.IsOptional)()
 ], SectorPatchParams.prototype, "processTypes", void 0);
 __decorate([
+    (0, swagger_1.ApiPropertyOptional)({ type: [String] }),
     (0, class_validator_1.IsArray)(),
     (0, class_validator_1.IsString)({ each: true }),
     (0, class_validator_1.IsOptional)()
@@ -87,6 +103,7 @@ exports.SectorPatchParams = SectorPatchParams;
 class SectorPatchAddUsersParams {
 }
 __decorate([
+    (0, swagger_1.ApiPropertyOptional)({ type: [Number] }),
     (0, class_validator_1.IsArray)(),
     (0, class_validator_1.IsNumber)({}, { each: true }),
     (0, class_validator_1.IsOptional)()
@@ -95,6 +112,7 @@ exports.SectorPatchAddUsersParams = SectorPatchAddUsersParams;
 class SectorPatchAddResponsiblesParams {
 }
 __decorate([
+    (0, swagger_1.ApiPropertyOptional)({ type: [Number] }),
     (0, class_validator_1.IsArray)(),
     (0, class_validator_1.IsNumber)({}, { each: true }),
     (0, class_validator_1.IsOptional)()

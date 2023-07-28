@@ -43,14 +43,17 @@ exports.UserCreationParams = UserCreationParams;
 class UserPatchParams {
 }
 __decorate([
+    (0, swagger_1.ApiPropertyOptional)({ type: String }),
     (0, class_validator_1.IsString)(),
     (0, class_validator_1.IsOptional)()
 ], UserPatchParams.prototype, "jobId", void 0);
 __decorate([
+    (0, swagger_1.ApiPropertyOptional)({ type: String }),
     (0, class_validator_1.IsString)(),
     (0, class_validator_1.IsOptional)()
 ], UserPatchParams.prototype, "roleId", void 0);
 __decorate([
+    (0, swagger_1.ApiPropertyOptional)({ type: String }),
     (0, class_validator_1.IsNumber)(),
     (0, class_validator_1.IsOptional)()
 ], UserPatchParams.prototype, "phoneNumber", void 0);
@@ -58,6 +61,7 @@ exports.UserPatchParams = UserPatchParams;
 class UserPatchAddSectorParams {
 }
 __decorate([
+    (0, swagger_1.ApiProperty)({ type: String }),
     (0, class_validator_1.IsString)()
 ], UserPatchAddSectorParams.prototype, "sectorId", void 0);
 exports.UserPatchAddSectorParams = UserPatchAddSectorParams;
